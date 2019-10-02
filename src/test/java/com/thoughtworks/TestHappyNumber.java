@@ -19,7 +19,7 @@ public class TestHappyNumber {
 
         int number = 0;
 
-        assertEquals(false, happyNumber.check(number));
+        assertFalse(happyNumber.check(number));
     }
 
     @Test
@@ -27,6 +27,14 @@ public class TestHappyNumber {
 
         int number = 1;
 
-        assertEquals(false, happyNumber.check(number));
+        assertFalse(happyNumber.check(number));
+    }
+
+    @Test
+    void GivenNumberTwo_WhenCheck_MustBeChecked() {
+
+        int number = 2;
+
+        assertEquals(true, new HappyNumber().check(number));
     }
 }
